@@ -31,13 +31,5 @@ api.add_resource(PingResource, '/ping')
 jwt = JWTManager(app)
 
 
-#@app.route('userPassword', methods=['GET'])
-#@jwt_required()
-#def getUserCreationDate():
-#    id = get_jwt_identity()
-#    user = db.session.scalars(db.select(Book).where(Book.id == id)).first()
-#    response = jsonify()
-
-
 if __name__ == '__main__':
     app.run(debug=True, port=6001)
